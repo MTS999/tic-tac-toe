@@ -8,12 +8,12 @@ function procedure(btn) {
         let turn_player = turn()
         btn_id.innerHTML = turn_player
         if (check_win(turn_player)) {
-            para.textContent = `${turn_player} wins`
+            para.textContent = `${turn_player} Win`
             new_game()
         }
         if (check_draw()) {
 
-            para.textContent = "match drawn"
+            para.textContent = "Match Drawn"
             new_game()
         }
     }
@@ -29,9 +29,8 @@ function check_valid(btn) {
     }
     return true
 }
-function turn() {
- 
 
+function turn() {
 
     if (turn_move === 0) {
         turn_move=1
@@ -42,26 +41,7 @@ function turn() {
         return "O"
     }
 }
-// function turn() {
-//     let temp = 0;
-//     let btn_id
-//     for (let i = 1; i <= 9; i++) {
-//         btn_id = document.getElementById(`btn${i}`)
 
-//         if (btn_id.innerHTML === "X") {
-//             temp = temp + 1;
-//         }
-//         else if (btn_id.innerHTML === "O") {
-//             temp = temp - 1;
-//         }
-//     }
-
-
-//     if (temp === 0) {
-//         return "X"
-//     }
-//     return "O"
-// }
 function check_win(move) {
     let btn_id_1;
     let btn_id_2;
