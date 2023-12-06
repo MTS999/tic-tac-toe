@@ -8,7 +8,7 @@ function procedure(btn) {
         let turn_player = turn()
         btn_id.innerHTML = turn_player
         if (check_win(turn_player)) {
-            para.textContent = `${turn_player} Win`
+            para.textContent = `player ${turn_player} Win`
             new_game()
         }
         if (check_draw()) {
